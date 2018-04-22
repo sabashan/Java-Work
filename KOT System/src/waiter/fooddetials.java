@@ -20,10 +20,6 @@ public class fooddetials {
 	private final DoubleProperty price;
 	private final StringProperty catergories;
 	
-	
-	
-	
-	
 	public fooddetials(String fid, String foodName, int stock, Double price, String catergories ) {
 		
 		this.fid = new SimpleStringProperty(fid);
