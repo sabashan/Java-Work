@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="428.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.loginWindowController">
+   <children>
+      <Label layoutX="31.0" layoutY="29.0" prefHeight="17.0" prefWidth="64.0" text="DB_Status" />
+      <Label fx:id="dbstatus" layoutX="109.0" layoutY="29.0" prefHeight="17.0" prefWidth="132.0" textFill="#1d792f" />
+      <Label layoutX="109.0" layoutY="67.0" prefHeight="25.0" prefWidth="106.0" text="LogIn here">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="comBox" layoutX="45.0" layoutY="138.0" prefHeight="25.0" prefWidth="204.0" promptText="select one" />
+      <JFXTextField fx:id="userId" layoutX="43.0" layoutY="203.0" prefHeight="25.0" prefWidth="204.0" />
+      <JFXPasswordField fx:id="passWord" layoutX="43.0" layoutY="267.0" prefHeight="25.0" prefWidth="204.0" />
+      <JFXButton fx:id="Blogin" layoutX="43.0" layoutY="318.0" onAction="#login" prefHeight="25.0" prefWidth="204.0" text="LogIn" />
+      <Label fx:id="loginstatus" alignment="CENTER" layoutX="29.0" layoutY="369.0" prefHeight="17.0" prefWidth="244.0" text="Login Status" textFill="#287c18">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="116.0" prefHeight="17.0" prefWidth="117.0" text="Department" />
+      <Label layoutX="45.0" layoutY="182.0" prefHeight="17.0" prefWidth="117.0" text="UserID" />
+      <Label layoutX="45.0" layoutY="247.0" prefHeight="17.0" prefWidth="117.0" text="Password" />
+      <ImageView fx:id="login" fitHeight="329.0" fitWidth="356.0" layoutX="165.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true" style="-fx-rotate: 270;">
+         <image>
+            <Image url="@../../login.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="S_RESIZE" />
+         </cursor></ImageView>
+   </children>
+</AnchorPane>

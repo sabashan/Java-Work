@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="738.0" prefWidth="1292.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="waiter.waiterwindowsController">
+   <children>
+      <AnchorPane prefHeight="701.0" prefWidth="1274.0" style="-fx-background-color: white;">
+         <children>
+            <VBox layoutX="41.0" layoutY="12.0" prefHeight="660.0" prefWidth="172.0" style="-fx-background-color: #fcfcfc;">
+               <children>
+                  <Label text="Catergories">
+                     <VBox.margin>
+                        <Insets left="20.0" top="60.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXButton fx:id="dishes" onAction="#dish" prefHeight="25.0" prefWidth="64.0" text="dish">
+                     <VBox.margin>
+                        <Insets left="50.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="drings" prefHeight="25.0" prefWidth="64.0" text="drinks">
+                     <VBox.margin>
+                        <Insets left="50.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children></VBox>
+            <HBox layoutX="230.0" layoutY="12.0" prefHeight="46.0" prefWidth="630.0" style="-fx-background-color: #fcfcfc;">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="433.0" text="Food List">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXButton fx:id="addfood" onAction="#addfood" prefHeight="36.0" prefWidth="96.0" text="Add Food">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="80.0" top="5.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children></HBox>
+            <HBox layoutX="232.0" layoutY="65.0" prefHeight="644.0" prefWidth="630.0" style="-fx-background-color: #fcfcfc;">
+               <children>
+                  <TableView fx:id="ftable" prefHeight="644.0" prefWidth="649.0" style="-fx-background-color: white;">
+                    <columns>
+                      <TableColumn fx:id="fidcoloumn" prefWidth="87.0" text="ID" />
+                      <TableColumn fx:id="fimage" prefWidth="98.0" text="Image" />
+                        <TableColumn fx:id="foodNamecoloumn" prefWidth="158.0" text="Name" />
+                        <TableColumn fx:id="stockcoloumn" prefWidth="61.0" text="stock" />
+                        <TableColumn fx:id="pricecoloumn" prefWidth="124.0" text="Price" />
+                        <TableColumn fx:id="catergories" prefWidth="102.0" text="catergories" />
+                    </columns>
+                  </TableView>
+               </children></HBox>
+            <VBox layoutX="883.0" layoutY="62.0" prefHeight="387.0" prefWidth="378.0">
+               <children>
+                  <TableView fx:id="billTable" onSort="#reset" prefHeight="554.0" prefWidth="296.0">
+                    <columns>
+                      <TableColumn fx:id="bidcoloumn" prefWidth="51.66668701171875" text="ID" />
+                        <TableColumn fx:id="bfid" prefWidth="69.0" text="fid" />
+                      <TableColumn fx:id="bNamecoloumn" prefWidth="92.0" text="Name" />
+                        <TableColumn fx:id="bqtycoloumn" prefWidth="41.0" text="qty" />
+                        <TableColumn fx:id="bPricecoloumn" prefWidth="71.0" text="Price" />
+                        <TableColumn fx:id="bdeletecoloumn" prefWidth="52.0" text="delete" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" layoutX="883.0" layoutY="451.0" prefHeight="259.0" prefWidth="378.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="28.0" prefWidth="103.0" text="Discount">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin>
+                  </Label>
+                  <JFXTextField fx:id="disid" prefHeight="25.0" prefWidth="281.0" promptText="type Discount Perscentage">
+                     <VBox.margin>
+                        <Insets left="100.0" right="25.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="28.0" prefWidth="103.0" text="TOTAL">
+                     <VBox.margin>
+                        <Insets right="25.0" top="10.0" />
+                     </VBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="total" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="34.0" prefWidth="294.0" style="-fx-border-color: black;">
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets right="25.0" />
+                     </VBox.margin></Label>
+                  <JFXButton fx:id="confirm" onAction="#confimB" prefHeight="41.0" prefWidth="284.0" text="Order Confirm">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="printrecipt" prefHeight="41.0" prefWidth="295.0" text="Print Recipt">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <JFXButton fx:id="rlist" layoutX="43.0" layoutY="676.0" onAction="#LoadData" prefHeight="25.0" prefWidth="170.0" text="refresh Food List" />
+            <AnchorPane layoutX="883.0" layoutY="9.0" prefHeight="48.0" prefWidth="378.0">
+               <children>
+                  <Button fx:id="reset" layoutY="4.0" mnemonicParsing="false" onAction="#reset" prefHeight="36.0" prefWidth="79.0" style="-fx-border-color: red;" text="reset Order" />
+                  <Label layoutX="90.0" layoutY="16.0" text="Invoice" />
+                  <JFXTextField fx:id="invoice" layoutX="131.0" layoutY="10.0" prefHeight="25.0" prefWidth="114.0" />
+                  <JFXButton fx:id="logout" buttonType="RAISED" layoutX="331.0" layoutY="13.0" onAction="#logout" style="-fx-border-color: red;" text="logout" textFill="RED" />
+                  <Label fx:id="lblwaiter" layoutX="251.0" layoutY="9.0" prefHeight="36.0" prefWidth="72.0" />
+               </children>
+            </AnchorPane>
+         </children>
+         <HBox.margin>
+            <Insets bottom="15.0" top="5.0" />
+         </HBox.margin>
+      </AnchorPane>
+   </children>
+</HBox>

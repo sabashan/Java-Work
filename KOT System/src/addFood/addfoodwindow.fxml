@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="307.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="addFood.addfoodwindowController">
+   <children>
+      <Label layoutX="126.0" layoutY="25.0" text="Add Items" />
+      <Label layoutX="42.0" layoutY="98.0" text="Food ID" />
+      <Label layoutX="42.0" layoutY="138.0" text="Food Name" />
+      <Label layoutX="42.0" layoutY="177.0" text="stock" />
+      <Label layoutX="42.0" layoutY="216.0" text="Price" />
+      <Label layoutX="42.0" layoutY="250.0" text="Catergories" />
+      <JFXTextField fx:id="foodid" layoutX="133.0" layoutY="88.0" />
+      <JFXTextField fx:id="foodName" layoutX="133.0" layoutY="126.0" />
+      <JFXTextField fx:id="stock" layoutX="133.0" layoutY="167.0" />
+      <JFXTextField fx:id="fprice" layoutX="133.0" layoutY="209.0" />
+      <JFXComboBox fx:id="cfood" layoutX="133.0" layoutY="246.0" prefHeight="25.0" prefWidth="135.0" promptText="select one" />
+      <JFXButton fx:id="addFoodBtn" layoutX="46.0" layoutY="320.0" onAction="#adding" prefHeight="25.0" prefWidth="83.0" style="-fx-border-color: black;" text="Add Food" />
+      <JFXToggleButton fx:id="tgbtn" layoutX="100.0" layoutY="44.0" prefHeight="46.0" prefWidth="107.0" size="8.0" text=" " />
+      <Label layoutX="87.0" layoutY="60.0" text="Food" />
+      <Label layoutX="187.0" layoutY="60.0" text="Stock" />
+      <JFXButton fx:id="addstockbtn" layoutX="166.0" layoutY="320.0" onAction="#stockupdate" prefHeight="25.0" prefWidth="83.0" style="-fx-border-color: black;" text="Add Stock" />
+   </children>
+</AnchorPane>
